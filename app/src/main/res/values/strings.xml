@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Weather App</string>
+
+    <string name="searchCityHint">Type city...</string>
+    <string name="searchBtnText">Search</string>
+
+    <string name="tabCurrentDay">Today</string>
+    <string name="tabNextDays">Next days</string>
+
+    <string name="feelsLikeText">Feels like </string>
+    <string name="degreeCelsius">&#176;C</string>
+    <string name="degreeFahrenheit">&#176;F</string>
+
+    <string name="tempUnitBtn_toCelsius">Show in Celsius</string>
+    <string name="tempUnitBtn_toFahrenheit">Show in Fahrenheit</string>
+
+    <string name="windSpeedLabel">Wind speed:</string>
+    <string name="windSpeedUnit">kph</string>
+    <string name="windDegreeLabel">Wind degree:</string>
+    <string name="windDegreeUnit">&#176;</string>
+    <string name="windDirLabel">Wind direction:</string>
+    <string name="humidityLabel">Humidity:</string>
+    <string name="humidityUnit">%</string>
+    <string name="cloudLabel">Cloud cover:</string>
+    <string name="cloudUnit">%</string>
+    <string name="precipitationLabel">Precipitation:</string>
+    <string name="precipitationUnit">mm</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

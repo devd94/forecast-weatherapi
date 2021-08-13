@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#9A9A9A</color>
+
+    <!--    <color name="colourPeach">#fce4cc</color>-->
+    <color name="colourPeach">#FFF2E5</color>
+    <color name="colourPinkLight">#d5aeb9</color>
+    <color name="colourPinkDark">#a25678</color>
+    <color name="colourGreyDark">#434d67</color>
+
+    <color name="colorPrimary">@color/colourPeach</color>
+    <color name="colorPrimaryVariant">@color/colourPinkLight</color>
+    <color name="colorOnPrimary">@color/colourPinkDark</color>
+
+    <color name="colorSecondary">@color/colourGreyDark</color>
+    <color name="colorSecondaryVariant">@color/black</color>
+    <color name="colorOnSecondary">@color/white</color>
+</resources>

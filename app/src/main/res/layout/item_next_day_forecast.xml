@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/forecastlist_item_bg"
+    android:layout_marginBottom="10dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecastitem_guidey1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecastitem_guidey2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.65"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecastItemIconIv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/forecastitem_guidey1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextForecastDateTv"
+        app:layout_constraintStart_toStartOf="@id/forecastitem_guidey1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="14 Aug 2021"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextForecastMaxTempTv"
+        app:layout_constraintStart_toStartOf="@id/forecastitem_guidey1"
+        app:layout_constraintTop_toBottomOf="@id/nextForecastDateTv"
+        android:text="32 C"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorOnSecondary"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextForecastMaxTempLabel"
+        app:layout_constraintStart_toEndOf="@id/nextForecastMaxTempTv"
+        app:layout_constraintTop_toBottomOf="@id/nextForecastDateTv"
+        app:layout_constraintBottom_toBottomOf="@id/nextForecastMaxTempTv"
+        android:text="(Max)"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorOnSecondary"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextForecastMinTempTv"
+        app:layout_constraintStart_toStartOf="@id/forecastitem_guidey2"
+        app:layout_constraintTop_toBottomOf="@id/nextForecastDateTv"
+        android:text="32 C"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorOnSecondary"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextForecastMinTempLabel"
+        app:layout_constraintStart_toEndOf="@id/nextForecastMinTempTv"
+        app:layout_constraintTop_toBottomOf="@id/nextForecastDateTv"
+        app:layout_constraintBottom_toBottomOf="@id/nextForecastMinTempTv"
+        android:text="(Min)"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorOnSecondary"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextForecastConditionTv"
+        app:layout_constraintStart_toStartOf="@id/forecastitem_guidey1"
+        app:layout_constraintTop_toBottomOf="@id/nextForecastMaxTempTv"
+        android:text="Patchy rain possible"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorOnSecondary"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

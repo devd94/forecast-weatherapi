@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.CurrentDayFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currLocationTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="24sp"
+            android:textColor="@color/colorSecondary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currDateTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currLocationTv"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnPrimary"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currtemp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currDateTv"
+            android:layout_marginTop="24dp"
+            android:textSize="36sp"
+            android:textColor="@color/colorSecondary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currFeelsLikeTemp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currtemp"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorSecondary"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currWeatherIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/currtemp"
+            app:layout_constraintTop_toTopOf="@id/currtemp"
+            app:layout_constraintBottom_toBottomOf="@id/currFeelsLikeTemp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tempUnitChangeBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currFeelsLikeTemp"
+            android:text="@string/tempUnitBtn_toFahrenheit"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/search_btn_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/btn_textcolour_selector"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currWindSpeedLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tempUnitChangeBtn"
+            android:text="@string/windSpeedLabel"
+            android:layout_marginTop="25dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorSecondary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currWindSpeed"
+            app:layout_constraintStart_toEndOf="@id/currWindSpeedLabel"
+            app:layout_constraintTop_toBottomOf="@id/tempUnitChangeBtn"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnPrimary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currWindDegreeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currWindSpeedLabel"
+            android:text="@string/windDegreeLabel"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorSecondary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currWindDegree"
+            app:layout_constraintStart_toEndOf="@id/currWindDegreeLabel"
+            app:layout_constraintTop_toBottomOf="@id/currWindSpeedLabel"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnPrimary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currWindDirLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currWindDegreeLabel"
+            android:text="@string/windDirLabel"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorSecondary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currWindDir"
+            app:layout_constraintStart_toEndOf="@id/currWindDirLabel"
+            app:layout_constraintTop_toBottomOf="@id/currWindDegreeLabel"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnPrimary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currHumidityLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currWindDirLabel"
+            android:text="@string/humidityLabel"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorSecondary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currHumidity"
+            app:layout_constraintStart_toEndOf="@id/currHumidityLabel"
+            app:layout_constraintTop_toBottomOf="@id/currWindDirLabel"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnPrimary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currCloudLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currHumidityLabel"
+            android:text="@string/cloudLabel"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorSecondary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currCloud"
+            app:layout_constraintStart_toEndOf="@id/currCloudLabel"
+            app:layout_constraintTop_toBottomOf="@id/currHumidityLabel"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnPrimary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currPrecipitationLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currCloudLabel"
+            android:text="@string/precipitationLabel"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorSecondary"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/currPrecipitation"
+            app:layout_constraintStart_toEndOf="@id/currPrecipitationLabel"
+            app:layout_constraintTop_toBottomOf="@id/currCloudLabel"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnPrimary"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

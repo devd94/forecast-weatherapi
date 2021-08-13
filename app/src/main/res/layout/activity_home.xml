@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activity.HomeActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_guidex1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_guidex2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_guidey1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.04"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_guidey2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.96"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchbar_et"
+        app:layout_constraintStart_toStartOf="@id/home_guidey1"
+        app:layout_constraintEnd_toStartOf="@id/searchBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/home_guidex1"
+        android:background="@drawable/searchbar_temp"
+        android:hint="@string/searchCityHint"
+        android:textSize="16sp"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/colorSecondary"
+        android:paddingLeft="40dp"
+        android:paddingRight="20dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintWidth_percent="0.7"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/searchBtn"
+        app:layout_constraintStart_toEndOf="@id/searchbar_et"
+        app:layout_constraintEnd_toEndOf="@id/home_guidey2"
+        app:layout_constraintTop_toTopOf="@id/searchbar_et"
+        app:layout_constraintBottom_toBottomOf="@id/searchbar_et"
+        app:layout_constraintWidth_percent="0.2"
+        android:background="@drawable/search_btn_bg"
+        android:text="@string/searchBtnText"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="@color/btn_textcolour_selector"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currLocationForecastBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/home_guidex2"
+        android:layout_marginBottom="20dp"
+        android:text="Load Current Location Forecast"
+        android:textAllCaps="false"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/search_btn_bg"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/btn_textcolour_selector"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/home_viewpager"
+        app:layout_constraintStart_toStartOf="@id/home_guidey1"
+        app:layout_constraintEnd_toEndOf="@id/home_guidey2"
+        app:layout_constraintTop_toTopOf="@id/home_guidex1"
+        app:layout_constraintBottom_toBottomOf="@id/home_guidex2"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/home_tablayout"
+        app:tabBackground="@color/colorOnPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/home_guidex2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeTablayout_tab1"
+            android:text="@string/tabCurrentDay"
+            android:icon="@drawable/sun_rain_icon" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeTablayout_tab2"
+            android:text="@string/tabNextDays"
+            android:icon="@drawable/sun_rain_icon" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/home_progress"
+        app:layout_constraintStart_toStartOf="@id/home_guidey1"
+        app:layout_constraintEnd_toEndOf="@id/home_guidey2"
+        app:layout_constraintTop_toTopOf="@id/home_guidex1"
+        app:layout_constraintBottom_toBottomOf="@id/home_guidex2"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
